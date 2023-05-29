@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>LGame</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="circles">
+          <div class="circle-user">
+            <h2>User</h2>
+            <div class="circle">
+              <img name="userSelect" src="img/question.svg" alt="" />
+            </div>
+          </div>
+          <div class="circle-comp">
+            <h2>Comp</h2>
+            <div class="circle">
+              <img name="test" src="img/question.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="buttons-user">
+          <button onclick="setStone(), resetCount(), changeImages()">
+            Stone
+          </button>
+          <button onclick="setScissiors(), resetCount(), changeImages()">
+            Scissors
+          </button>
+          <button onclick="setPaper(), resetCount(), changeImages()">
+            Paper
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
