@@ -1,4 +1,4 @@
-const images = ["../img/paper.svg", "../img/scissors.svg", "../img/stone.svg"];
+const images = ["img/paper.svg", "img/scissors.svg", "img/stone.svg"];
 const time = 20;
 function myFunc() {
   for (let i = 0; i < 10; i++) {}
