@@ -27,26 +27,3 @@ function setScissiors() {
 function setPaper() {
   document.userSelect.src = images[0];
 }
-
-// function animationChangeImages() {
-
-// }
-
-// .....
-// Задаем функцию, которую нужно выполнить
-// function myFunction() {
-//   console.log("Функция выполнена");
-// }
-
-// Задаем время задержки в миллисекундах
-// const times = 5000; // 5000 миллисекунд = 5 секунд
-
-// // Вызываем функцию через заданное время и сохраняем ID таймера в переменную
-// const timerId = setTimeout(changeImages, times);
-
-// // Останавливаем выполнение функции через 3 секунды
-// setTimeout(
-//         function () {
-//             clearTimeout(timerId);
-//             console.log("Функция остановлена");
-//         }, 7000);

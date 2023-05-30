@@ -6,7 +6,12 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 150px;
+  margin-top: 100px;
+}
+.score {
+  display: flex;
+  gap: 32px;
+  font-size: 40px;
 }
 .circles {
   display: flex;
