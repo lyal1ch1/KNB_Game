@@ -17,9 +17,9 @@
     <main>
       <div class="container">
         <div class="score">
-          <div class="user-score"><h3>0</h3></div>
+          <div class="user-score"><h3 id="scoreUser" val>0</h3></div>
           <h3>:</h3>
-          <div class="comp-score"><h3>0</h3></div>
+          <div class="comp-score"><h3 id="scoreComp">0</h3></div>
         </div>
         <div class="circles">
           <div class="circle-user">
@@ -36,13 +36,20 @@
           </div>
         </div>
         <div class="buttons-user">
-          <button onclick="setStone(), resetCount(), changeImages()">
+          <button
+            onclick="setStone(), changeImages(), setTimeout(getScoreCount, 700)
+            "
+          >
             Stone
           </button>
-          <button onclick="setScissiors(), resetCount(), changeImages()">
+          <button
+            onclick="setScissiors(), changeImages(), setTimeout(getScoreCount, 700)"
+          >
             Scissors
           </button>
-          <button onclick="setPaper(), resetCount(), changeImages()">
+          <button
+            onclick="setPaper(), changeImages(), setTimeout(getScoreCount, 700)"
+          >
             Paper
           </button>
         </div>

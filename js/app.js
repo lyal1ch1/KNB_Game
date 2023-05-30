@@ -1,29 +1,81 @@
-const images = ["img/paper.svg", "img/scissors.svg", "img/stone.svg"];
+"use strict";
+
+const images = ["img/stone.svg", "img/scissors.svg", "img/paper.svg"];
 const time = 20;
-function myFunc() {
-  for (let i = 0; i < 10; i++) {}
-}
+let compSelect = 0;
+let userSelect = 0;
 let count = 0;
+const userScoreHeading = document.getElementById("scoreUser");
+const compScoreHeading = document.getElementById("scoreComp");
+let userScore = 0;
+let compScore = 0;
+
 function changeImages() {
+  let randNumber = Math.floor(Math.random() * images.length);
+  let randomImage = images[randNumber];
   if (count === 30) {
-    return randomImage;
+    count = 0;
+    return compSelect;
   }
-  const randNumber = Math.floor(Math.random() * images.length);
-  const randomImage = images[randNumber];
   document.test.src = randomImage;
+  compSelect = randNumber;
   count++;
   setTimeout(changeImages, time);
 }
 
-function resetCount() {
-  count = 0;
-}
 function setStone() {
-  document.userSelect.src = images[2];
+  userSelect = 0;
+  document.userSelect.src = images[0];
 }
 function setScissiors() {
+  userSelect = 1;
   document.userSelect.src = images[1];
 }
 function setPaper() {
-  document.userSelect.src = images[0];
+  userSelect = 2;
+  document.userSelect.src = images[2];
+}
+function getScoreCount() {
+  // Выбор камня
+  if (userSelect === 0 && compSelect === 0) {
+    console.log("ничья");
+  }
+  if (userSelect === 0 && compSelect === 1) {
+    console.log("победа");
+    userScore++;
+    userScoreHeading.textContent = userScore;
+  }
+  if (userSelect === 0 && compSelect === 2) {
+    compScore++;
+    console.log("проиграл(");
+    compScoreHeading.textContent = compScore;
+  }
+  // Выбор ножниц
+  if (userSelect === 1 && compSelect === 0) {
+    compScore++;
+    console.log("проиграл");
+    compScoreHeading.textContent = compScore;
+  }
+  if (userSelect === 1 && compSelect === 1) {
+    console.log("ничья");
+  }
+  if (userSelect === 1 && compSelect === 2) {
+    userScore++;
+    console.log("выиграл");
+    userScoreHeading.textContent = userScore;
+  }
+  // Выбор бумаги
+  if (userSelect === 2 && compSelect === 0) {
+    userScore++;
+    console.log("победа");
+    userScoreHeading.textContent = userScore;
+  }
+  if (userSelect === 2 && compSelect === 1) {
+    compScore++;
+    console.log("проиграл");
+    compScoreHeading.textContent = compScore;
+  }
+  if (userSelect === 2 && compSelect === 2) {
+    console.log("ничья");
+  }
 }
