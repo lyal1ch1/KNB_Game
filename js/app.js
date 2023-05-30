@@ -1,7 +1,13 @@
 "use strict";
 
-const images = ["img/stone.svg", "img/scissors.svg", "img/paper.svg"];
-const time = 20;
+// const images = ["img/stone.svg", "img/scissors1.svg", "img/paper.svg"];
+const images = [
+  "img/hands/hand-rock.svg",
+  "img/hands/hand-scissors.svg",
+  "img/hands/hand-svgrepo.svg",
+];
+
+const time = 50;
 let compSelect = 0;
 let userSelect = 0;
 let count = 0;
@@ -78,4 +84,14 @@ function getScoreCount() {
   if (userSelect === 2 && compSelect === 2) {
     console.log("ничья");
   }
+}
+
+function resetScore() {
+  compScore = 0;
+  userScore = 0;
+  compScoreHeading.textContent = compScore;
+  userScoreHeading.textContent = userScore;
+
+  document.userSelect.src = "img/question.svg";
+  document.test.src = "img/question.svg";
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/media.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,22 +37,27 @@
           </div>
         </div>
         <div class="buttons-user">
-          <button
-            onclick="setStone(), changeImages(), setTimeout(getScoreCount, 700)
+          <div>
+            <button
+              onclick="setStone(), changeImages(), setTimeout(getScoreCount, 1800)
             "
-          >
-            Stone
-          </button>
-          <button
-            onclick="setScissiors(), changeImages(), setTimeout(getScoreCount, 700)"
-          >
-            Scissors
-          </button>
-          <button
-            onclick="setPaper(), changeImages(), setTimeout(getScoreCount, 700)"
-          >
-            Paper
-          </button>
+            >
+              Камень
+            </button>
+            <button
+              onclick="setScissiors(), changeImages(), setTimeout(getScoreCount, 1800)"
+            >
+              Ножницы
+            </button>
+            <button
+              onclick="setPaper(), changeImages(), setTimeout(getScoreCount, 1800)"
+            >
+              Бумага
+            </button>
+          </div>
+          <div>
+            <button onclick="resetScore()">Reset</button>
+          </div>
         </div>
       </div>
     </main>
