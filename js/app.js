@@ -13,10 +13,15 @@ let userSelect = 0;
 let count = 0;
 const userScoreHeading = document.getElementById("scoreUser");
 const compScoreHeading = document.getElementById("scoreComp");
+const button = document.getElementsByClassName("button");
+console.log(button);
 let userScore = 0;
 let compScore = 0;
 
 function changeImages() {
+  for (let i = 0; i < button.length; i++) {
+    button[i].disabled = true;
+  }
   let randNumber = Math.floor(Math.random() * images.length);
   let randomImage = images[randNumber];
   if (count === 30) {
@@ -83,6 +88,9 @@ function getScoreCount() {
   }
   if (userSelect === 2 && compSelect === 2) {
     console.log("ничья");
+  }
+  for (let i = 0; i < button.length; i++) {
+    button[i].disabled = false;
   }
 }
 
